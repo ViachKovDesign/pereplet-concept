@@ -266,7 +266,7 @@ a:hover .cover__pages, a:focus-visible .cover__pages { transform: translateX(2%)
 .hero__stats span { display: block; font-style: italic; margin-top: 6px; }
 .hero__stats li:nth-child(2) { transform: translateY(clamp(16px, 3vw, 56px)); }
 .hero__stats li:nth-child(4) { transform: translateY(clamp(16px, 3vw, 56px)); }
-.hero__sticker { position: absolute; z-index: 5; width: clamp(96px, 10vw, 170px); left: calc(var(--pad) + 2.6 * (var(--col) + var(--gutter))); top: 41%; animation: spin 18s linear infinite; }
+.hero__sticker { position: relative; grid-column: 3 / 5; grid-row: 2; align-self: end; justify-self: start; margin-bottom: 1.5vw; z-index: 5; width: clamp(96px, 10vw, 170px); animation: spin 18s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* бегущая строка */
@@ -679,7 +679,7 @@ html.is-arriving .curtain { transform: none; visibility: visible; }
   .hero__lead { grid-column: 1 / 7; grid-row: 5; margin-top: 40px; }
   .hero__cta { grid-column: 1 / 7; grid-row: 6; }
   .hero__stats { grid-column: 1 / 7; grid-row: 7; margin-top: 24px; }
-  .hero__sticker { width: 92px; left: auto; right: var(--pad); top: auto; bottom: 30%; }
+  .hero__sticker { position: absolute; grid-row: auto; width: 92px; left: auto; right: var(--pad); top: auto; bottom: 30%; margin: 0; }
 
   .sec-num { grid-column: 1 / 7; grid-row: 1; font-size: 26vw; margin-bottom: -6vw; }
   .sec-title { grid-column: 1 / 7; grid-row: 2; font-size: clamp(2.4rem, 12.5vw, 4rem); }
