@@ -122,7 +122,7 @@
           <path d="M0 40H640M0 80H640M0 120H640M0 160H640M0 200H640M0 240H640M0 280H640M0 320H640M0 360H640M0 400H640"/>
           <path d="M40 0V440M80 0V440M120 0V440M160 0V440M200 0V440M240 0V440M280 0V440M320 0V440M360 0V440M400 0V440M440 0V440M480 0V440M520 0V440M560 0V440M600 0V440"/>
         </g>
-        <path class="map-river" d="M-10 360 C 120 330, 180 420, 320 390 S 520 300, 650 330" fill="none" stroke="var(--accent)" stroke-width="26" stroke-linecap="round" opacity="0.9"/>
+        <path class="map-river" id="river" d="M-10 360 C 120 330, 180 420, 320 390 S 520 300, 650 330" fill="none" stroke="var(--accent)" stroke-width="26" stroke-linecap="round" opacity="0.9"/>
         <g fill="none" stroke="var(--ink)" stroke-linecap="square">
           <path d="M60 -10 L120 450" stroke-width="14"/>
           <path d="M-10 120 L650 90" stroke-width="20"/>
@@ -140,16 +140,16 @@
           <circle r="34" fill="var(--accent)"/>
           <text y="10" text-anchor="middle" font-family="Unbounded, sans-serif" font-weight="800" font-size="30" fill="var(--paper)">П</text>
         </g>
-        <g font-family="Unbounded, sans-serif" font-size="11" font-weight="600" fill="var(--ink)" letter-spacing="1">
-          <text x="330" y="80">БУЛЬВАР ФОРЗАЦ</text>
-          <text x="410" y="200">ПЕРЕПЛЁТНЫЙ ПЕР.</text>
-          <text x="232" y="180" transform="rotate(81 232 180)">УЛ. КОРЕШКОВАЯ</text>
-          <text x="140" y="232">ОБРЕЗНОЙ ТУП.</text>
-          <text x="40" y="196">м. Переплётная</text>
-          <text x="420" y="292" fill="var(--paper)" font-size="10">р. КАПТАЛКА</text>
+        <g class="halo" font-family="Unbounded, sans-serif" font-size="11" font-weight="600" fill="var(--ink)" letter-spacing="1">
+          <text x="330" y="78">БУЛЬВАР ФОРЗАЦ</text>
+          <text x="440" y="207">ПЕРЕПЛЁТНЫЙ ПЕР.</text>
+          <text x="283" y="128" transform="rotate(80.5 283 128)">УЛ. КОРЕШКОВАЯ</text>
+          <text x="134" y="232">ОБРЕЗНОЙ ТУП.</text>
+          <text x="26" y="200">м. Переплётная</text>
         </g>
-        <g font-family="Literata, serif" font-style="italic" font-size="13" fill="var(--ink)">
-          <text x="440" y="270">вход со двора, дверь синяя</text>
+        <text font-family="Unbounded, sans-serif" font-size="10" font-weight="700" fill="var(--paper)" letter-spacing="2" dy="4"><textPath href="#river" startOffset="62%">р. КАПТАЛКА</textPath></text>
+        <g class="halo" font-family="Literata, serif" font-style="italic" font-size="13" fill="var(--ink)">
+          <text x="318" y="280">вход со двора, дверь синяя</text>
         </g>
       </svg>
       <figcaption>Схема стилизованная, а все названия вымышленные — как и сам магазин.</figcaption>
