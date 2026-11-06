@@ -634,6 +634,13 @@ html.is-arriving .curtain { transform: none; visibility: visible; }
   .concept-plaque { grid-column: 1 / -1; }
 }
 
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero__cover--2 { display: none; }
+  .hero__cover--1 { width: 14vw; top: 2%; right: var(--pad); }
+  .hero__line--2 { margin-left: calc(2 * (var(--col) + var(--gutter))); }
+  .hero__sticker { grid-column: 2 / 4; }
+}
+
 @media (max-width: 900px) {
   .nav { display: none; }
   .menu-btn { display: inline-block; }

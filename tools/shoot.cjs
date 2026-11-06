@@ -48,8 +48,8 @@ async function scrollThrough(page) {
         });
         return { scrollW: document.documentElement.scrollWidth, vw, bad: bad.slice(0, 8) };
       });
-      const file = `${OUT}/${p}-${w}.png`;
-      await page.screenshot({ path: file, fullPage: true });
+      const file = `${OUT}/${p}-${w}.jpg`;
+      await page.screenshot({ path: file, fullPage: true, type: 'jpeg', quality: 62 });
       report.push({ page: p, w, errors, overflow });
       console.log(p, w, 'errors:', errors.length, errors.slice(0, 3).join(' | '), 'scrollW', overflow.scrollW, '/', overflow.vw, overflow.bad.length ? 'OVER: ' + overflow.bad.join('; ') : '');
       await page.close();
