@@ -491,8 +491,8 @@
     if (!art) return;
     $$('.book.is-active').forEach(function (b) { b.classList.remove('is-active'); });
     art.classList.add('is-active');
-    var title = $('.book__title', art).textContent;
-    var author = $('.book__author', art).textContent;
+    var title = art.getAttribute('data-title');
+    var author = art.getAttribute('data-author');
     d.title = '«' + title + '», ' + author + ' — Переплёт';
     var md = $('meta[name="description"]');
     if (md) md.setAttribute('content', $('.book__annotation', art).textContent.slice(0, 160));
@@ -532,7 +532,7 @@
     err.textContent = '';
     var id = f.getAttribute('data-id');
     var art = f.closest('.book');
-    var bookTitle = art ? $('.book__title', art).textContent : '';
+    var bookTitle = art ? art.getAttribute('data-title') : '';
     store.add(id, name.value.trim());
     var det = f.closest('[data-reserve]');
     var until = new Date(Date.now() + 3 * 864e5).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long' });

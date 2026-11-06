@@ -209,9 +209,9 @@ a:hover .cover__pages, a:focus-visible .cover__pages { transform: translateX(2%)
 .card__meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; padding-top: 10px; border-top: 1px solid currentColor; font: 600 .7rem/1.2 var(--f-display); text-transform: uppercase; letter-spacing: .06em; }
 .card__meta span:last-child { white-space: nowrap; }
 .tag { display: inline-block; font: 700 .64rem/1 var(--f-display); text-transform: uppercase; letter-spacing: .08em; padding: 7px 10px; border-radius: 999px; background: var(--ink); color: var(--paper); margin: 0; }
-.card .tag { position: absolute; top: 10px; right: -8px; z-index: 2; pointer-events: none; transform: rotate(4deg); }
+.card .tag { position: absolute; top: -12px; right: -8px; z-index: 2; pointer-events: none; transform: rotate(4deg); }
 .card .tag + .tag, .tag--house { background: var(--accent); }
-.card .tag--house { top: 46%; left: -10px; right: auto; transform: rotate(-4deg); }
+.card .tag--house { top: -12px; left: -8px; right: auto; transform: rotate(-4deg); }
 
 /* ---------- заголовки секций ---------- */
 .sec-head { align-items: end; margin-bottom: clamp(40px, 6vw, 96px); }
@@ -270,6 +270,7 @@ a:hover .cover__pages, a:focus-visible .cover__pages { transform: translateX(2%)
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* бегущая строка */
+.marquee-wrap { overflow: clip; padding: 24px 0; margin: -34px 0 -24px; position: relative; z-index: 6; }
 .marquee { background: var(--accent); color: var(--paper); overflow: clip; padding: clamp(14px, 1.6vw, 24px) 0; transform: rotate(-1.2deg) scale(1.02); position: relative; z-index: 6; margin: -10px 0 0; }
 .marquee__track { display: flex; width: max-content; gap: clamp(20px, 3vw, 48px); align-items: center; animation: marquee 32s linear infinite; font: 800 clamp(1.4rem, 3.4vw, 3.6rem)/1 var(--f-display); text-transform: uppercase; letter-spacing: -.02em; white-space: nowrap; }
 .marquee__track i { font-style: normal; font-size: .7em; }
@@ -754,7 +755,7 @@ html.is-arriving .curtain { transform: none; visibility: visible; }
   .house__item .house__cover, .house__item--2 .house__cover, .house__item--3 .house__cover { grid-column: 1 / 5; }
   .house__item--2 .house__cover { grid-column: 3 / 7; }
   .house__item .house__text, .house__item--2 .house__text, .house__item--3 .house__text { grid-column: 1 / 7; grid-row: 2; margin-top: -40px; }
-  .visit__title { grid-column: 1 / 7; }
+  .visit__title { grid-column: 1 / 7; grid-row: 1; }
   .visit__map, .visit__info { grid-column: 1 / 7; }
   .visit__info { columns: 1; }
 

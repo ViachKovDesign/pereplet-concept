@@ -118,7 +118,7 @@ function related(b) {
 const genBooks = () => books.map((b, i) => {
   const letter = b.title.replace(/[«»"]/g, '').charAt(0);
   return `
-<article class="book" id="${b.id}" data-book="${b.id}" aria-labelledby="t-${b.id}">
+<article class="book" id="${b.id}" data-book="${b.id}" data-title="${esc(b.title)}" data-author="${esc(b.author)}" aria-labelledby="t-${b.id}">
   <div class="book__hero grid">
     <nav class="book__crumbs" aria-label="Хлебные крошки"><a href="catalog.html">Каталог</a> <span aria-hidden="true">/</span> <a href="catalog.html?genre=${encodeURIComponent(b.genre)}">${esc(b.genre)}</a></nav>
     <span class="book__letter" aria-hidden="true">${esc(letter)}</span>
