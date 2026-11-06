@@ -35,7 +35,7 @@ python3 -m http.server 8080
 2. В репозитории: **Settings → Pages**.
 3. В блоке *Build and deployment* выберите **Source: Deploy from a branch**, ветку `main` и папку `/ (root)`, нажмите **Save**.
 4. Через 1–2 минуты сайт будет по адресу `https://ВАШ-ЛОГИН.github.io/ИМЯ-РЕПОЗИТОРИЯ/`.
-5. Если адрес отличается от `https://viachkovdesign.github.io/pereplet/`, поправьте константу `SITE` в `tools/build.mjs` и запустите `node tools/build.mjs` — обновятся ссылки на OG-картинку.
+5. Сейчас сайт настроен на адрес `https://viachkovdesign.github.io/pereplet-concept/`. Если у вас другой — поправьте константу `SITE` в `tools/build.mjs` и запустите `node tools/build.mjs`: обновятся `canonical`, `og:url` и `og:image` на всех страницах.
 
 ## Как поменять книги
 

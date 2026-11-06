@@ -1,2 +1,27 @@
+# зависимости и сборочный мусор
 node_modules/
+package-lock.json
+npm-debug.log*
+*.log
+
+# временные файлы и отчёты тестов
+*.tmp
+*.swp
+*~
+.cache/
+test-results/
+playwright-report/
+.lighthouseci/
+lighthouse-*.json
+
+# секреты и локальные настройки
+.env
+.env.*
+*.pem
+*.key
+
+# системные и редакторы
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/

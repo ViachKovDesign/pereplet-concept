@@ -496,6 +496,14 @@
     d.title = '«' + title + '», ' + author + ' — Переплёт';
     var md = $('meta[name="description"]');
     if (md) md.setAttribute('content', $('.book__annotation', art).textContent.slice(0, 160));
+    /* у каждой книги свой canonical и og:url */
+    var canon = $('link[rel="canonical"]');
+    var ogUrl = $('meta[property="og:url"]');
+    if (canon) {
+      var u = canon.getAttribute('href').split('?')[0] + '?id=' + art.id;
+      canon.setAttribute('href', u);
+      if (ogUrl) ogUrl.setAttribute('content', u);
+    }
 
     /* уже отложена? */
     if (store.get().some(function (x) { return x.id === art.dataset.book; })) {

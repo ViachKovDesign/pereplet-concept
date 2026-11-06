@@ -14,7 +14,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(readFileSync(join(ROOT, 'data/books.json'), 'utf8'));
 const { books, events, moods } = data;
 const byId = Object.fromEntries(books.map(b => [b.id, b]));
-const SITE = 'https://viachkovdesign.github.io/pereplet/';
+const SITE = 'https://viachkovdesign.github.io/pereplet-concept/';
 
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const rub = n => n.toLocaleString('ru-RU').replace(/ /g, ' ') + ' ₽';
@@ -207,6 +207,7 @@ const PAGES = {
 
 const head = (file) => {
   const p = PAGES[file];
+  const url = SITE + (file === 'index.html' ? '' : file);
   return `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -214,7 +215,9 @@ const head = (file) => {
 <meta name="description" content="${esc(p.desc)}">
 <meta name="theme-color" content="#EEEDE8">
 <meta name="color-scheme" content="light">
+<link rel="canonical" href="${url}">
 <meta property="og:type" content="website">
+<meta property="og:url" content="${url}">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Переплёт">
 <meta property="og:title" content="${esc(p.title)}">
